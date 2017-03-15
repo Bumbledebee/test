@@ -1,0 +1,37 @@
+<%= form_for(realtest) do |f| %>
+  <% if realtest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(realtest.errors.count, "error") %> prohibited this realtest from being saved:</h2>
+
+      <ul>
+      <% realtest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :application_id %>
+    <%= f.number_field :application_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :publisher_id %>
+    <%= f.number_field :publisher_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :platform_id %>
+    <%= f.number_field :platform_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :feature_id %>
+    <%= f.number_field :feature_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

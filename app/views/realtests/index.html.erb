@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Realtests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Application</th>
+      <th>Publisher</th>
+      <th>Platform</th>
+      <th>Feature</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @realtests.each do |realtest| %>
+      <tr>
+        <td><%= @applications.find(realtest.application_id).name %></td>
+        <td><%= @publishers.find(realtest.publisher_id).name %></td>
+        <td><%= @platforms.find(realtest.platform_id).name %></td>
+        <td><%= @features.find(realtest.feature_id).name %></td>
+        <td><%= link_to 'Show', realtest %></td>
+        <td><%= link_to 'Edit', edit_realtest_path(realtest) %></td>
+        <td><%= link_to 'Destroy', realtest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Realtest', new_realtest_path %>

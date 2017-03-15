@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @publisher.name %>
+</p>
+
+<p>
+  <strong>Dashboardlink:</strong>
+  <%= @publisher.dashboardlink %>
+</p>
+
+<p>
+  <strong>Fyberpublisherid:</strong>
+  <%= @publisher.fyberpublisherid %>
+</p>
+
+<%= link_to 'Edit', edit_publisher_path(@publisher) %> |
+<%= link_to 'Back', publishers_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @testvalue.value %>
+</p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @testvalue.test_id %>
+</p>
+
+<p>
+  <strong>Result state:</strong>
+  <%= @testvalue.result_state %>
+</p>
+
+<p>
+  <strong>Result recommendation:</strong>
+  <%= @testvalue.result_recommendation %>
+</p>
+
+<%= link_to 'Edit', edit_testvalue_path(@testvalue) %> |
+<%= link_to 'Back', testvalues_path %>

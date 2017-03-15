@@ -1,0 +1,37 @@
+<%= form_for(testvalue) do |f| %>
+  <% if testvalue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(testvalue.errors.count, "error") %> prohibited this testvalue from being saved:</h2>
+
+      <ul>
+      <% testvalue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :value %>
+    <%= f.text_field :value %>
+  </div>
+
+  <div class="field">
+    <%= f.label :test_id %>
+    <%= f.number_field :test_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :result_state %>
+    <%= f.text_field :result_state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :result_recommendation %>
+    <%= f.text_field :result_recommendation %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

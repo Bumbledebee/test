@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Realtestresults</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Realtest</th>
+      <th>Test</th>
+      <th>Testvalue</th>
+      <th>Testresult</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @realtestresults.each do |realtestresult| %>
+      <tr>
+        <td><%= realtestresult.realtest_id %></td>
+        <td><%= realtestresult.test_id %></td>
+        <td><%= realtestresult.testvalue_id %></td>
+        <td><%= realtestresult.testresult_id %></td>
+        <td><%= link_to 'Show', realtestresult %></td>
+        <td><%= link_to 'Edit', edit_realtestresult_path(realtestresult) %></td>
+        <td><%= link_to 'Destroy', realtestresult, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Realtestresult', new_realtestresult_path %>

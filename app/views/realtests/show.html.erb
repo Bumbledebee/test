@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Application:</strong>
+  <%= @realtest.application_id %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @realtest.publisher_id %>
+</p>
+
+<p>
+  <strong>Platform:</strong>
+  <%= @realtest.platform_id %>
+</p>
+
+<p>
+  <strong>Feature:</strong>
+  <%= @realtest.feature_id %>
+</p>
+
+<%= link_to 'Edit', edit_realtest_path(@realtest) %> |
+<%= link_to 'Back', realtests_path %>
